@@ -11,7 +11,7 @@ set -u
 OS="$(uname)"
 if [[ "${OS}" == "Darwin" ]]
 then
-  curl -L "$DOTFILES_URL/osx.sh" | sh
+  /bin/bash -c "$(curl -fsSL $DOTFILES_URL/osx.sh)"
 elif [[ "${OS}" == "Linux" ]]
 then
   abort "Not ready yet."
