@@ -1,8 +1,10 @@
 #!/bin/bash
 
 echo "Setting up macOS..."
-
+# Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> $HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # NVM
 touch ~/.zshrc
@@ -12,3 +14,6 @@ source ~/.zshrc
 nvm install --lts
 nvm list
 nvm use --lts
+
+# VSCode
+brew install --cask visual-studio-code
