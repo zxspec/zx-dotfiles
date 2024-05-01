@@ -8,4 +8,7 @@ echo "Setting up macOS..."
 touch ~/.zshrc
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.zshrc
+
+nvm install --lts
 nvm list
+nvm use --lts
