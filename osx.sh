@@ -7,6 +7,10 @@ echo "Setting up macOS..."
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Fonts
+brew tap homebrew/cask-fonts
+brew install --cask font-source-code-pro
+
 # NVM
 touch ~/.zshrc
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
@@ -14,9 +18,11 @@ source ~/.zshrc
 
 # OhMyZsh and autosuggestions
 RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 brew install zsh-autosuggestions
 echo 'source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
+
+# agnoster theme for OhMyZsh
+echo 'omz theme use agnoster' >> ~/.oh-my-zsh/oh-my-zsh.sh
 
 
 nvm install --lts
@@ -25,6 +31,7 @@ nvm use --lts
 
 
 # Tools
+brew install tldr
 brew install htop
 brew install wget
 brew install go
@@ -36,6 +43,8 @@ brew install --cask syncthing
 brew install --cask firefox
 brew install --cask google-chrome
 brew install --cask iterm2
+brew install --cask obsidian
+brew install --cask rectangle
 
 # Folders
 mkdir ${HOME}/repos
