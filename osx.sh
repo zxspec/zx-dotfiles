@@ -35,6 +35,7 @@ brew install tldr
 brew install htop
 brew install wget
 brew install go
+brew install diff-so-fancy
 brew install --cask visual-studio-code
 brew install --cask sourcetree
 brew install --cask alfred
@@ -42,9 +43,21 @@ brew install --cask vlc
 brew install --cask syncthing
 brew install --cask firefox
 brew install --cask google-chrome
+# alternative Terminal
 brew install --cask iterm2
+
 brew install --cask obsidian
+
+# Rectangle - window manager
 brew install --cask rectangle
+defaults write ~/Library/Preferences/com.knollsoft.Rectangle launchOnLogin -bool true
 
 # Folders
 mkdir ${HOME}/repos
+
+# MacOS settings
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+## enable Developer menu in Safari
+defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
