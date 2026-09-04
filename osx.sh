@@ -50,7 +50,7 @@ brew install --cask obsidian
 
 # Rectangle - window manager
 brew install --cask rectangle
-defaults write ~/Library/Preferences/com.knollsoft.Rectangle launchOnLogin -bool true
+defaults write ~/Library/Preferences/com.knollsoft.Rectangle.plist launchOnLogin -bool true
 
 # Folders
 mkdir ${HOME}/repos
